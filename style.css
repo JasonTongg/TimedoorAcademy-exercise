@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  background-color: brown;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+header > h1 {
+  font-size: 40px;
+  color: brown;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  text-align: center;
+}
+
+.cars {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.cars img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.cars div h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  color: brown;
+}
+
+.cars div a {
+  text-decoration: none;
+  background-color: brown;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+}
+
+.cars div a:hover {
+  color: brown;
+  background-color: white;
+  border: 1px solid brown;
+  transition: 1s;
+}
+
+table {
+  width: 700px;
+  margin-inline: auto;
+}
+
+table td {
+  padding: 1rem;
+}
+
+.form {
+  padding: 4rem;
+  width: 250px;
+  margin-inline: auto;
+}
+
+.form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px solid brown;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  background-image: url('../background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form form label {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form form label input {
+  padding: 0.2rem 1rem;
+  font-size: 1.1rem;
+}
+
+.form form button {
+  width: 200px;
+  margin-inline: auto;
+  border: none;
+  background-color: brown;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.form form button:hover {
+  background-color: white;
+  color: brown;
+  border: 1px solid brown;
+  transition: 0.5s;
+}
+
+footer {
+  background-color: brown;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}
