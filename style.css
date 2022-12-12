@@ -119,6 +119,10 @@ table td {
   gap: 1rem;
 }
 
+.form form.active {
+  box-shadow: 10px 10px 40px red;
+}
+
 .form form label input {
   padding: 0.2rem 1rem;
   font-size: 1.1rem;

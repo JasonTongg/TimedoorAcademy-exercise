@@ -4,11 +4,12 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Tugas-3</title>
     <link rel="stylesheet" href="./style.css" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
   </head>
-  <body>
+  <body id="content">
     <header>
       <nav>
-        <h1>Rental Car</h1>
+        <h1>{{title}}</h1>
         <ul>
           <li><a href="#">cars</a></li>
           <li><a href="#">table</a></li>
@@ -26,78 +27,61 @@
           <td>Harga</td>
         </tr>
         <tr>
-          <td>Mobil Biru</td>
-          <td>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </td>
+          <td>{{carTitle[0]}}</td>
+          <td>{{dummyDesc}}</td>
           <td>
             <select>
-              <option value="red">red</option>
-              <option value="blue">blue</option>
-              <option value="green">green</option>
+              <option v-bind:value="color[0]">{{color[0]}}</option>
+              <option v-bind:value="color[1]">{{color[1]}}</option>
+              <option v-bind:value="color[2]">{{color[2]}}</option>
             </select>
           </td>
-          <td>Rp. 300.000,-</td>
+          <td>{{price[0]}}</td>
         </tr>
         <tr>
-          <td>Mobil Hijau</td>
-          <td>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </td>
+          <td>{{carTitle[1]}}</td>
+          <td>{{dummyDesc}}</td>
           <td>
             <select>
-              <option value="red">red</option>
-              <option value="blue">blue</option>
-              <option value="green">green</option>
+              <option v-bind:value="color[0]">{{color[0]}}</option>
+              <option v-bind:value="color[1]">{{color[1]}}</option>
+              <option v-bind:value="color[2]">{{color[2]}}</option>
             </select>
           </td>
-          <td>Rp. 500.000,-</td>
+          <td>{{price[1]}}</td>
         </tr>
         <tr>
-          <td>Mobil Putih</td>
-          <td>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </td>
+          <td>{{carTitle[2]}}</td>
+          <td>{{dummyDesc}}</td>
           <td>
             <select>
-              <option value="red">red</option>
-              <option value="blue">blue</option>
-              <option value="green">green</option>
+              <option v-bind:value="color[0]">{{color[0]}}</option>
+              <option v-bind:value="color[1]">{{color[1]}}</option>
+              <option v-bind:value="color[2]">{{color[2]}}</option>
             </select>
           </td>
-          <td>Rp. 600.000,-</td>
+          <td>{{price[2]}}</td>
         </tr>
       </table>
       <div class="form">
-        <form>
+        <form
+          :class="{active:hover}"
+          v-on:mouseOver="active"
+          v-on:mouseLeave="inactive"
+        >
           <label>Name <input type="text" /></label>
           <label>Email <input type="email" /></label>
           <label>Address <input type="text" /></label>
           <label
             >Unit
             <select>
-              <option value="mobil putih">Mobil Putih</option>
-              <option value="mobil Biru">Mobil Biru</option>
-              <option value="mobil Hijau">Mobil Hijau</option>
+              <option v-bind:value="carTitle[2]">{{carTitle[2]}}</option>
+              <option v-bind:value="carTitle[0]">{{carTitle[0]}}</option>
+              <option v-bind:value="carTitle[1]">{{carTitle[1]}}</option>
             </select>
           </label>
           <label>Jumlah <input type="number" /></label>
-          <button type="submit" id="submit">Order</button>
+          <button type="submit" id="submit" v-on:click="order">Order</button>
         </form>
       </div>
     </main>

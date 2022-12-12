@@ -1,11 +1,5 @@
 let order = document.getElementById('submit');
 let cars = document.querySelector('.cars');
-console.log(order);
-
-order.addEventListener('click', (e) => {
-  e.preventDefault();
-  alert('Order Success...');
-});
 
 let mobil = [
   {
@@ -35,3 +29,32 @@ for (let i = 0; i < mobil.length; i++) {
         </div>`
   );
 }
+
+let mobils = new Vue({
+  el: '#content',
+  data: {
+    title: 'Rental Car',
+    color: ['red', 'blue', 'green'],
+    price: ['Rp 300.000,-', 'Rp 500.000,-', 'Rp 600.000,-'],
+    dummyDesc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.`,
+    carTitle: ['Mobil Biru', 'Mobil HIjau', 'Mobil Putih'],
+    hover: true,
+  },
+  methods: {
+    order() {
+      alert('Order Success...');
+    },
+    active() {
+      this.hover = false;
+    },
+    inactive() {
+      this.hover = true;
+    },
+  },
+  computed: {},
+});
